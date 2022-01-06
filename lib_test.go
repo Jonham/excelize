@@ -370,3 +370,7 @@ func TestUnzipToTemp(t *testing.T) {
 	_, err = f.unzipToTemp(z.File[0])
 	assert.EqualError(t, err, "EOF")
 }
+
+func Test_defaultTrue(t *testing.T) {
+	assert.True(t, defaultTrue(nil))
+}
